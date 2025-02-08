@@ -20,6 +20,15 @@ const UseState = () => {
       <button onClick={() => setCount(prevCount => prevCount - 1)}>
         Decrement
       </button>
+      <button onClick={() => {
+        theme === 'dark' ? setTheme('light') : setTheme('dark')
+      }}>
+        {/* this works \/ but trying it with ternary ^^ */}
+        {/* if(theme === 'dark') {
+            setTheme('light')
+        } else setTheme('dark')}}> */}
+        Toggle Theme
+      </button>
     </div>
   );
 };
